@@ -9,6 +9,27 @@ Stage:
 - [ ] GA
 - [ ] Live
 
+# alertjs???
+`What?`
+
+> Yet another opensource JS UI LIB
+
+`When?`
+
+> Coming soon
+
+`Where?`
+
+> Conding in HTML & Javascript, running completely on client side (*web browser*)
+
+`Why?`
+
+> Very simple concept + easy to setup, coding, modifying, maintaining
+
+`How?`
+
+> Please see below
+
 # Installation
 
 1. Make sure the html is complying with HTML5 by adding this at the first line of html file (before `<html>` tag)
