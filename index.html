@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- META -->
+	<title>Alert JS Index</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="description" content="" />
+	
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/kickstart.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="style.css" media="all" /> 
+	
+	<!-- Javascript -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/kickstart.js"></script>
+	<script type="text/javascript" src="alertjs.js"></script>
+	<script type="text/javascript" src="ui-kickstart.js"></script>
+	<script type="text/javascript" >
+	
+	var MyApp = {
+		name: "My App",
+		components: ["my-gadget"],
+		uiDriver: "kickstart"
+	};
+
+	var Todo = {
+
+		//type: "js",
+		//controller: controller.js, //Default controller
+
+		id: model.num("id"),
+		name: model.str("required"),
+		task: model.str("required"),
+		isSaved: model.bool("required"),
+
+		save: function() {
+			alert(this.name.toString() + " is saved");
+		}
+	};
+
+	</script>
+</head>
+<body onload="AlertJS(MyApp)">
+<div class="grid">
+	<div class="col_12" style="margin-top:100px;">
+		<h1 class="center">
+		<p><i class="fa fa-exclamation-triangle"></i></p>
+		Alert JS</h1>
+		<h4 style="color:#999;margin-bottom:40px;" class="center">
+			<font color="red">JS</font>
+			<font color="green">UI</font>
+			<font color="blue">LIB</font>
+		</h4>
+	<div class="col_12" style="background-color: red" data-view="tabs" data-model="Todo" id="my-gadget">
+		Here
+		<input type="text" name="id"/>
+	</div>
+	</div>
+</div> <!-- End Grid -->
+</body>
+</html>
