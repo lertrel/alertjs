@@ -15,7 +15,7 @@ Stage:
 ```html
 <!DOCTYPE html>
 ```
-2. Adding all CSS and Javascript dependencies you need (apart from alertjs) in html `<head>` tag
+2. Adding all CSS and Javascript dependencies you need (apart from alertjs) inside html `<head>` tag
 ```html
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="css/kickstart.css" media="all" />
@@ -25,12 +25,12 @@ Stage:
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/kickstart.js"></script>
 ```
-3. Adding alertjs' javascirpt files ('alert.js' is mandatory, other optional js files as needed)
+3. Still inside html `<head>` tag, adding alertjs' javascirpt files ('alert.js' is mandatory, other optional js files as needed)
 ```html
 	<script type="text/javascript" src="alertjs.js"></script>
 	<script type="text/javascript" src="ui-kickstart.js"></script>
 ```
-4. Adding another javascript block for initiating alertjs
+4. Still inside html `<head>` tag, adding another javascript block for initiating alertjs
 ```javascript
 	<script type="text/javascript" >
 	var MyApp = {
@@ -40,7 +40,7 @@ Stage:
 	};
 	</script>
 ```
-5. Anywhere inside html <body> tag, adding an html tag as a place holder for rendering alertjs UI (ex. `<DIV>`, `<P>`, `<IFRAME>`, etc.)
+5. Anywhere inside html `<body>` tag, adding an html tag as a place holder for rendering alertjs UI (ex. `<DIV>`, `<P>`, `<IFRAME>`, etc.)
 ```html
 	<div class="col_12" style="background-color: red" data-view="tabs" data-model="Todo" id="my-gadget"></div>
 ```
@@ -53,4 +53,4 @@ Stage:
 ```html
 <body onload="AlertJS(MyApp)">
 ```
-[See full example](https://github.com/lertrel/alertjs/index.html)
+[See full example](https://github.com/lertrel/alertjs/blob/master/index.html)
