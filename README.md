@@ -9,13 +9,13 @@ Stage:
 - [ ] GA
 - [ ] Live
 
-#Installation
+# Installation
 
-1. Make sure the html is comply with HTML5 by adding this at the first line of html file
+1. Make sure the html is complying with HTML5 by adding this at the first line of html file (before `<html>` tag)
 ```html
 <!DOCTYPE html>
 ```
-2. Adding all CSS and Javascript dependencies you need (apart from alertjs) in <body> tag
+2. Adding all CSS and Javascript dependencies you need (apart from alertjs) in html `<head>` tag
 ```html
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="css/kickstart.css" media="all" />
@@ -30,7 +30,7 @@ Stage:
 	<script type="text/javascript" src="alertjs.js"></script>
 	<script type="text/javascript" src="ui-kickstart.js"></script>
 ```
-4. Adding javascript block for initiating alertjs
+4. Adding another javascript block for initiating alertjs
 ```javascript
 	<script type="text/javascript" >
 	var MyApp = {
@@ -40,3 +40,17 @@ Stage:
 	};
 	</script>
 ```
+5. Anywhere inside html <body> tag, adding an html tag as a place holder for rendering alertjs UI (ex. `<DIV>`, `<P>`, `<IFRAME>`, etc.)
+```html
+	<div class="col_12" style="background-color: red" data-view="tabs" data-model="Todo" id="my-gadget"></div>
+```
+**NOTE**
+- Attribute id has to be defined and has to be same with what defined in components field from item 4
+- Attribute data-view has to be defined as one of the names of alertjs' supported UI component (e.g., "crud", "table", etc.)
+- Attribute data-model is optional for when developer needs to take advantage on alertjs data binding
+
+6. Triggering alertjs engine to start by adding javascript function call to onload event of html `<body>` tag
+```html
+<body onload="AlertJS(MyApp)">
+```
+[See full example](https://github.com/lertrel/alertjs/index.html)
